@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import BookList from './components/BookList'
+import BooksList from './containers/BooksList'
 import BooksForm from './components/BooksForm'
 
 class App extends React.Component {
@@ -9,7 +9,7 @@ class App extends React.Component {
   return (
     <div className="App">
       <h1>Jello</h1>
-     <BookList></BookList> 
+     <BooksList></BooksList> 
      <BooksForm></BooksForm>
     </div>
   );

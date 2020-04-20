@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const BooksForm = () => {
+const BooksForm = () => {
 
     const categories = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"]
 
@@ -22,3 +22,4 @@ export const BooksForm = () => {
     )
 
 }
+export default BooksForm;

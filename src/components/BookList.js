@@ -1,21 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-
-class BookList extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {input:''}
-    }
+export class BookList extends React.Component {
 
     
     render() {
     
+        const { books } = this.props;
         return (
 
             <div className="booklist">
-                   
+                   <h1> { books.map(elem => ( elem.title )) } </h1>
                 <table>
                     <tr>
                         <th>Book Id</th>
@@ -34,4 +28,3 @@ class BookList extends React.Component {
     }
 }
 
-export default BookList

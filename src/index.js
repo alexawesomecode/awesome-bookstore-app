@@ -7,7 +7,7 @@ import bookStore from './store'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={bookStore.getState()}>
+    <Provider store={bookStore}>
      <App /> 
      </Provider>
     
