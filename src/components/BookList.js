@@ -29,10 +29,6 @@ const BookList = props => {
   );
 };
 
-BookList.defaultProps = {
-
-  books: [{ id: 1, title: 'default', category: 'Horror' }],
-};
 BookList.propTypes = {
 
   books: PropTypes.arrayOf(PropTypes.object).isRequired
