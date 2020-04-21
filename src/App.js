@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import BooksList from './containers/BooksList'
-import BooksForm from './components/BooksForm'
+import BooksForms from './containers/BooksForms'
 
 class App extends React.Component {
   
@@ -10,7 +10,8 @@ class App extends React.Component {
     <div className="App">
       <h1>Jello</h1>
      <BooksList></BooksList> 
-     <BooksForm></BooksForm>
+     <BooksForms></BooksForms>
+     
     </div>
   );
   }
