@@ -1,30 +1,43 @@
 import React from 'react';
-import Book from './Book'
-export class BookList extends React.Component {
+import PropTypes from 'prop-types';
+import Book from './Book';
 
-    
-    render() {
-    
-        const { books } = this.props;
-        return (
+const BookList = props => {
+  const { books } = props;
 
-            <div className="booklist">
-                  
-                <table>
-                    <tr>
-                        <th>Book Id</th>
-                        <th>Category</th>
-                        <th>Title</th>
-                    </tr>
-                    {books.map((elem,i) => {
+  return (
 
-                        return <Book key={i} title={elem.title} category={elem.category} id={elem.id} />
+    <div className="booklist">
 
-                    })}
-                </table>
-            </div>
+      <table>
+        <tr>
+          <th>Book Id</th>
+          <th>Category</th>
+          <th>Title</th>
+        </tr>
+        { books.map(elem => (
+          <Book
+            key={elem.id}
+            title={elem.title}
+            category={elem.category}
+            id={elem.id}
+          />
+        ))}
+      </table>
+    </div>
 
-        )
-    }
-}
+  );
+};
 
+BookList.defaultProps = {
+
+  books: [{ id: 1, title: 'default', category: 'Horror' }],
+};
+BookList.propTypes = {
+
+  books: PropTypes.array,
+
+};
+
+
+export default BookList;
