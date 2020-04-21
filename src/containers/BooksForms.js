@@ -8,6 +8,6 @@ const mapDispatchToProps = (dispatch) => ({
     removeBook: (book) => dispatch(REMOVE_BOOK(book))
 
 })
-const mapStateToProps = state => ({ books: state.books });
+//const mapStateToProps = state => ({ books: state.books });
 
-export default connect(mapStateToProps, mapDispatchToProps)(BooksForm)
+export default connect(null, mapDispatchToProps)(BooksForm)
