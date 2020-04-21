@@ -35,7 +35,7 @@ BookList.defaultProps = {
 };
 BookList.propTypes = {
 
-  books: PropTypes.array,
+  books: PropTypes.arrayOf(PropTypes.object).isRequired
 
 };
 
