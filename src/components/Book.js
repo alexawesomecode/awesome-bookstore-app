@@ -2,19 +2,21 @@ import React from 'react';
 
 const Books = (props) => {
 
-    const { bookItem } = props;
+    const { id, title, category } = props;
     return (
         <tr className="bookitem">
             <td>
-                23
+                {id}
              </td>
              <td>
-                pepito
+                {title}
              </td>
              <td>
-                fiction
+                {category}
              </td>
         </tr>
         
     )
 }
+
+export default Books;

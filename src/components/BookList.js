@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Book from './Book'
 export class BookList extends React.Component {
 
     
@@ -9,18 +9,18 @@ export class BookList extends React.Component {
         return (
 
             <div className="booklist">
-                   <h1> { books.map(elem => ( elem.title )) } </h1>
+                  
                 <table>
                     <tr>
                         <th>Book Id</th>
                         <th>Category</th>
                         <th>Title</th>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Lunas</td>
-                        <td>Fiction</td>
-                    </tr>
+                    {books.map((elem,i) => {
+
+                        return <Book key={i} title={elem.title} category={elem.category} id={elem.id} />
+
+                    })}
                 </table>
             </div>
 

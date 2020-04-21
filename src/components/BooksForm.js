@@ -12,7 +12,12 @@ const BooksForm = () => {
             <form>
             <input type="text" /> 
             <select>
-                <option>default</option>
+        {categories.map(elem => {
+
+            return <option> {elem} </option>
+
+
+        })}
             </select>
             <input type="submit" value="submit"/>
             </form>
