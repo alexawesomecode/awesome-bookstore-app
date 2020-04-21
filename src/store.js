@@ -10,7 +10,7 @@ const firstState = [
 
 
 ];
-const bookStore = createStore(booksReducer, { books: firstState });
+const bookStore = createStore(booksReducer, firstState);
 
 
 export default bookStore;

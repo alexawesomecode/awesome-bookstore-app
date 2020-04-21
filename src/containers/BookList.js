@@ -10,19 +10,24 @@ const BookList = props => {
     <div className="booklist">
 
       <table>
-        <tr>
-          <th>Book Id</th>
-          <th>Category</th>
-          <th>Title</th>
-        </tr>
-        { books.map(elem => (
-          <Book
-            key={elem.id}
-            title={elem.title}
-            category={elem.category}
-            id={elem.id}
-          />
-        ))}
+
+        <tbody>
+
+          <tr>
+            <th>Book Id</th>
+            <th>Category</th>
+            <th>Title</th>
+          </tr>
+          { books.map(elem => (
+            <Book
+              key={elem.id}
+              title={elem.title}
+              category={elem.category}
+              id={elem.id}
+            />
+          ))}
+        </tbody>
+
       </table>
     </div>
 
@@ -31,7 +36,7 @@ const BookList = props => {
 
 BookList.propTypes = {
 
-  books: PropTypes.arrayOf(PropTypes.object).isRequired
+  books: PropTypes.arrayOf(PropTypes.object).isRequired,
 
 };
 
