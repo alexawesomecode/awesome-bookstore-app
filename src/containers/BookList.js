@@ -40,6 +40,7 @@ const BookList = props => {
 BookList.propTypes = {
 
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
+  removeBook: PropTypes.func.isRequired,
 
 };
 
