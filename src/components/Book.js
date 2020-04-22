@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Books = props => {
-  const { id, title, category } = props;
+  const { id, title, category, handleRemoveBook } = props;
+  console.log(handleRemoveBook)
   return (
     <tr className="bookitem">
       <td>
@@ -13,6 +14,10 @@ const Books = props => {
       </td>
       <td>
         {category}
+      </td>
+      <td>
+
+        <button onClick={() => handleRemoveBook({id, title, category})}>remove</button>
       </td>
     </tr>
 
