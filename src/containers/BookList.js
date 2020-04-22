@@ -1,18 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import CategoryFilter from '../components/CategoryFilter';
 
 const BookList = props => {
-  const { books, removeBook } = props;
-
+  const { books, removeBook, addFilter, filter } = props;
+  
+  const handleFilterChange = (e) =>  addFilter(e);
+  
   return (
 
     <div className="booklist">
-
+    <CategoryFilter changeFilter={handleFilterChange}/>
       <table>
 
         <tbody>
-
+    
           <tr>
             <th>Book Id</th>
             <th>Category</th>
@@ -20,15 +23,30 @@ const BookList = props => {
             <th>Remove Book</th>
 
           </tr>
-          { books.map(elem => (
-            <Book
+          { books.map(elem => {
+
+            if (filter === 'All') {
+           
+           return <Book
               key={elem.id}
               title={elem.title}
               category={elem.category}
               id={elem.id}
               handleRemoveBook={removeBook}
             />
-          ))}
+            }
+            else if (elem.category === filter) {
+
+              return <Book
+              key={elem.id}
+              title={elem.title}
+              category={elem.category}
+              id={elem.id}
+              handleRemoveBook={removeBook}
+            />
+
+            }
+            })}
         </tbody>
 
       </table>

@@ -3,7 +3,7 @@ import React from 'react';
 class BooksForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { title: '', category: '' };
+    this.state = { title: '', category: 'Action' };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
@@ -21,7 +21,7 @@ class BooksForm extends React.Component {
   handleSubmit(e) {
     let randomNum = Math.floor(Math.random() * 1000)
     this.props.createBook({id: randomNum, title: this.state.title, category: this.state.category })
-    this.setState({title:'', category: 'Action'})
+    this.setState({title:'', category: ''})
     e.preventDefault()
   }
   render() {
@@ -37,7 +37,7 @@ class BooksForm extends React.Component {
         <h2>{title}</h2>
         <form onSubmit={this.handleSubmit}>
           <input type="text" id="formInput" onChange={this.handleChange} value={title} />
-          <select id="formSelect">
+          <select id="formSelect" onChange={this.handleChange}>
             {categories.map(elem => (
               <option key={elem}>
 

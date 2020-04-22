@@ -10,7 +10,7 @@ const firstState = [
 
 
 ];
-const bookStore = createStore(booksReducer, firstState);
+const bookStore = createStore(booksReducer, {books: firstState,  filter: "All"});
 
 
 export default bookStore;
