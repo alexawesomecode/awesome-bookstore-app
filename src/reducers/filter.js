@@ -1,10 +1,10 @@
-const filterReduce = (state, action) => {
-    switch (action.type) {
-    case 'ALL':
-        return [...state, {state.filter: 'All'}]
-    case 'Horror':
-        return [...state, {state.filter: 'Horror'}]
+const filterReduce = (state = '', action) => {
+  switch (action.type) {
+    case 'CHANGE_FILTER':
+      return action.filter;
     default:
-        return [...state, {state.filter: 'All'}]
-    }
-}
+      return state;
+  }
+};
+
+export default filterReduce;

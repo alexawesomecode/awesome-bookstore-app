@@ -1,24 +1,35 @@
 import React from 'react';
-const CategoryFilter = (props) => {
-    const { changeFilter } = props
-    const handleSubmit = (e) => {
-        
-        let input = e.target.value;
-        changeFilter(input)   
-    }
-    return (
+import PropTypes from 'prop-types';
 
-        <div className="categoryfilter">
-            <select onChange={handleSubmit}>
-                <option> All </option>
-                <option> Horror </option>
-                <option> Action </option>
-                <option>Novel</option>
-                <option>Adventure</option>
+const CategoryFilter = props => {
+  const { changeFilter } = props;
+  const handleSubmit = e => {
+    const input = e.target.value;
+    changeFilter(input);
+  };
+  return (
 
-            </select>
-        </div>
-    )
-}
+    <div className="categoryfilter">
+      <select onChange={handleSubmit}>
+        <option> All </option>
+        <option> Horror </option>
+        <option> Action </option>
+        <option>Novel</option>
+        <option>Adventure</option>
+        <option>Kids</option>
+        <option>Learning</option>
+        <option>History</option>
+        <option>Biography</option>
+        <option>Sci-Fi</option>
+
+      </select>
+    </div>
+  );
+};
+
+CategoryFilter.propTypes = {
+  changeFilter: PropTypes.func.isRequired,
+};
+
 
 export default CategoryFilter;

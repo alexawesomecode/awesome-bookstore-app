@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import booksReducer from './reducers/books';
+import storeReducer from './reducers/index';
 
 const firstState = [
   { id: Math.floor(Math.random() * 1000), title: 'Pelos', category: 'Horror' },
@@ -10,7 +10,7 @@ const firstState = [
 
 
 ];
-const bookStore = createStore(booksReducer, {books: firstState,  filter: "All"});
+const bookStore = createStore(storeReducer, { books: firstState, filter: 'All' });
 
 
 export default bookStore;

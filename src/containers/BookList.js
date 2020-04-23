@@ -4,18 +4,20 @@ import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 
 const BookList = props => {
-  const { books, removeBook, addFilter, filter } = props;
-  
-  const handleFilterChange = (e) =>  addFilter(e);
-  
+  const {
+    books, removeBook, addFilter, filter,
+  } = props;
+
+  const handleFilterChange = e => addFilter(e);
+
   return (
 
     <div className="booklist">
-    <CategoryFilter changeFilter={handleFilterChange}/>
+      <CategoryFilter changeFilter={handleFilterChange} />
       <table>
 
         <tbody>
-    
+
           <tr>
             <th>Book Id</th>
             <th>Category</th>
@@ -24,29 +26,30 @@ const BookList = props => {
 
           </tr>
           { books.map(elem => {
-
             if (filter === 'All') {
-           
-           return <Book
-              key={elem.id}
-              title={elem.title}
-              category={elem.category}
-              id={elem.id}
-              handleRemoveBook={removeBook}
-            />
+              return (
+                <Book
+                  key={elem.id}
+                  title={elem.title}
+                  category={elem.category}
+                  id={elem.id}
+                  handleRemoveBook={removeBook}
+                />
+              );
             }
-            else if (elem.category === filter) {
-
-              return <Book
-              key={elem.id}
-              title={elem.title}
-              category={elem.category}
-              id={elem.id}
-              handleRemoveBook={removeBook}
-            />
-
+            if (elem.category === filter) {
+              return (
+                <Book
+                  key={elem.id}
+                  title={elem.title}
+                  category={elem.category}
+                  id={elem.id}
+                  handleRemoveBook={removeBook}
+                />
+              );
             }
-            })}
+            return undefined;
+          })}
         </tbody>
 
       </table>
@@ -58,6 +61,9 @@ const BookList = props => {
 BookList.propTypes = {
 
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
+  removeBook: PropTypes.func.isRequired,
+  addFilter: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
 
 };
 

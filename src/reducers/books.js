@@ -1,15 +1,9 @@
-const booksReducer = (state, action) => {
-  console.log(state, 'dfs', action.books)
+const booksReducer = (state = [], action) => {
   switch (action.type) {
     case 'CREATE_BOOK':
-      return Object.assign({}, state, {books: [...state.books, action.books]});
+      return [...state, action.books];
     case 'REMOVE_BOOK':
-      
-      let books =  state.books.filter(elem => elem.id !== action.books.id)
-      return Object.assign({}, state.filter, {books: books})
-
-    case 'CHANGE_FILTER':
-      return Object.assign({}, state, {filter: action.filter})
+      return state.filter(elem => elem.id !== action.books.id);
     default:
       return state;
   }
