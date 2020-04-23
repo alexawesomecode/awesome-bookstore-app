@@ -8,6 +8,7 @@ class BooksForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
   handleChange(e) {
     const input = e.target.value;
     if (e.target.id === 'formInput') this.setState({ title: input });
@@ -15,7 +16,6 @@ class BooksForm extends React.Component {
   }
 
   handleSubmit(e) {
-
     const randomNum = Math.floor(Math.random() * 1000);
     const { title, category } = this.state;
     const { createBook } = this.props;
