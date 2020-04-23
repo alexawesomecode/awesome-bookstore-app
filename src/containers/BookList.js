@@ -62,8 +62,11 @@ BookList.propTypes = {
 
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
   removeBook: PropTypes.func.isRequired,
+<<<<<<< HEAD
   addFilter: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
+=======
+>>>>>>> 6c1419ebc50d03aee21dd72a3efa15e020deea66
 
 };
 

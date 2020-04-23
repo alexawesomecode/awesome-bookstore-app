@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+<<<<<<< HEAD:src/components/BooksForm.js
+=======
 
+>>>>>>> 6c1419ebc50d03aee21dd72a3efa15e020deea66:src/containers/BooksForm.js
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -10,7 +13,10 @@ class BooksForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+<<<<<<< HEAD:src/components/BooksForm.js
+=======
 
+>>>>>>> 6c1419ebc50d03aee21dd72a3efa15e020deea66:src/containers/BooksForm.js
   handleChange(e) {
     const input = e.target.value;
     if (e.target.id === 'formInput') this.setState({ title: input });
@@ -19,10 +25,14 @@ class BooksForm extends React.Component {
 
   handleSubmit(e) {
 <<<<<<< HEAD:src/components/BooksForm.js
-    let randomNum = Math.floor(Math.random() * 1000)
-    this.props.createBook({id: randomNum, title: this.state.title, category: this.state.category })
-    this.setState({title:'', category: ''})
-    e.preventDefault()
+    const randomNum = Math.floor(Math.random() * 1000);
+    const { title, category } = this.state;
+    const { createBook } = this.props;
+    createBook({ id: randomNum, title, category });
+    this.setState({ title: '', category });
+    e.preventDefault();
+  }
+
 =======
     const { title, category } = this.state;
     const { createBook } = this.props;
@@ -36,21 +46,22 @@ class BooksForm extends React.Component {
     );
     this.setState({ title: '', category: 'Action' });
     e.preventDefault();
->>>>>>> 6c1419ebc50d03aee21dd72a3efa15e020deea66:src/containers/BooksForm.js
   }
 
 
+>>>>>>> 6c1419ebc50d03aee21dd72a3efa15e020deea66:src/containers/BooksForm.js
   render() {
-    const { title, category } = this.state;
     const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-
-
+    const { title } = this.state;
     return (
 
 
       <div className="bookform">
+<<<<<<< HEAD:src/components/BooksForm.js
+=======
         <h1>{category}</h1>
         <h2>{title}</h2>
+>>>>>>> 6c1419ebc50d03aee21dd72a3efa15e020deea66:src/containers/BooksForm.js
 
         <form onSubmit={this.handleSubmit}>
           <input type="text" id="formInput" onChange={this.handleChange} value={title} />
@@ -72,10 +83,16 @@ class BooksForm extends React.Component {
   }
 }
 
+<<<<<<< HEAD:src/components/BooksForm.js
+=======
 
+>>>>>>> 6c1419ebc50d03aee21dd72a3efa15e020deea66:src/containers/BooksForm.js
 BooksForm.propTypes = {
 
   createBook: PropTypes.func.isRequired,
 };
+<<<<<<< HEAD:src/components/BooksForm.js
+=======
 
+>>>>>>> 6c1419ebc50d03aee21dd72a3efa15e020deea66:src/containers/BooksForm.js
 export default BooksForm;
