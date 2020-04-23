@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 
 const BookList = props => {
-  const { books } = props;
+  const { books, removeBook } = props;
 
   return (
 
@@ -17,6 +17,8 @@ const BookList = props => {
             <th>Book Id</th>
             <th>Category</th>
             <th>Title</th>
+            <th>Remove Book</th>
+
           </tr>
           { books.map(elem => (
             <Book
@@ -24,6 +26,7 @@ const BookList = props => {
               title={elem.title}
               category={elem.category}
               id={elem.id}
+              handleRemoveBook={removeBook}
             />
           ))}
         </tbody>
@@ -37,6 +40,7 @@ const BookList = props => {
 BookList.propTypes = {
 
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
+  removeBook: PropTypes.func.isRequired,
 
 };
 
