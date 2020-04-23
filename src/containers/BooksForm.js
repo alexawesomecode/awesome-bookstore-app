@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 class BooksForm extends React.Component {
   constructor(props) {
     super(props);
@@ -31,6 +32,7 @@ class BooksForm extends React.Component {
     e.preventDefault();
   }
 
+
   render() {
     const { title, category } = this.state;
     const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
@@ -42,6 +44,7 @@ class BooksForm extends React.Component {
       <div className="bookform">
         <h1>{category}</h1>
         <h2>{title}</h2>
+
         <form onSubmit={this.handleSubmit}>
           <input type="text" id="formInput" onChange={this.handleChange} value={title} />
           <select id="formSelect">
@@ -61,6 +64,7 @@ class BooksForm extends React.Component {
     );
   }
 }
+
 
 BooksForm.propTypes = {
 
