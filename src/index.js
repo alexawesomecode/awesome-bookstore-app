@@ -4,7 +4,7 @@ import './index.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import App from './components/App';
-import booksReducer from './reducers/books';
+import storeReducer from './reducers/index';
 
 const firstState = [
   { id: Math.floor(Math.random() * 1000), title: 'Pelos II', category: 'Horror' },
@@ -16,7 +16,7 @@ const firstState = [
 
 ];
 
-const bookStore = createStore(booksReducer, firstState);
+const bookStore = createStore(storeReducer, {books: firstState, filter: 'All'});
 
 
 ReactDOM.render(
