@@ -32,6 +32,7 @@ class BooksForm extends React.Component {
 
 
       <div className="bookform">
+        <h1>ADD NEW BOOK</h1>
         <form onSubmit={this.handleSubmit}>
           <input type="text" id="formInput" onChange={this.handleChange} value={title} />
           <select id="formSelect" onChange={this.handleChange}>

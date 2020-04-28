@@ -21,9 +21,10 @@ const Books = props => {
           {title}
         </div>
 
-        <div>
-
-          <button type="button" onClick={() => handleRemoveBook({ id, title, category })}>remove</button>
+        <div className="remove-container">
+          <span> Comments | </span>
+          <button type="button" onClick={() => handleRemoveBook({ id, title, category })}>Remove |</button>
+          <span> Edit </span>
         </div>
       </div>
       <div className="bookprogress">
@@ -34,6 +35,8 @@ const Books = props => {
         </div>
       </div>
       <div className="bookchapter">
+        <span>Current Chapter</span>
+  <span>Chapter {Math.floor(Math.random() * 10 )}</span>
         <p>update progress</p>
         {' '}
       </div>
