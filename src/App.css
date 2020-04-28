@@ -67,6 +67,19 @@ html {
   padding:10px;
   color:lightsteelblue;
 }
+form {
+  display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+}
+form input:first-child {
+
+  flex:2;
+}
+form select {
+  flex: 1;
+  margin: 0 40px;
+}
 .bookitem {
 
   
@@ -203,7 +216,13 @@ button {
 
 form input:last-child {
   border: none;
-  background-color: yellow;
-  font-size: 28px;
-  font-weight: bold;
+  background-color: dodgerblue;
+  font-size: 15px;
+  
+  color: white;
+  padding: 10px 24px;
+}
+.bookform h1 {
+
+  font-size:18px;
 }

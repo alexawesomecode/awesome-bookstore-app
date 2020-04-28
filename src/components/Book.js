@@ -36,7 +36,10 @@ const Books = props => {
       </div>
       <div className="bookchapter">
         <span>Current Chapter</span>
-  <span>Chapter {Math.floor(Math.random() * 10 )}</span>
+        <span>
+          Chapter
+          {Math.floor(Math.random() * 10)}
+        </span>
         <p>update progress</p>
         {' '}
       </div>
