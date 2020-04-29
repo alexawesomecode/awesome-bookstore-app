@@ -8,21 +8,28 @@ const CategoryFilter = props => {
     changeFilter(input);
   };
   return (
+    <div className="navbar">
+      <div className="logo">
+        <h2> Bookstore CMS </h2>
+        <p>BOOKS</p>
+        <p>CATEGORIES</p>
+      </div>
 
-    <div className="categoryfilter">
-      <select onChange={handleSubmit}>
-        <option> All </option>
-        <option> Horror </option>
-        <option> Action </option>
-        <option>Novel</option>
-        <option>Adventure</option>
-        <option>Kids</option>
-        <option>Learning</option>
-        <option>History</option>
-        <option>Biography</option>
-        <option>Sci-Fi</option>
+      <div className="categoryfilter">
+        <select onChange={handleSubmit}>
+          <option> All </option>
+          <option> Horror </option>
+          <option> Action </option>
+          <option>Novel</option>
+          <option>Adventure</option>
+          <option>Kids</option>
+          <option>Learning</option>
+          <option>History</option>
+          <option>Biography</option>
+          <option>Sci-Fi</option>
 
-      </select>
+        </select>
+      </div>
     </div>
   );
 };

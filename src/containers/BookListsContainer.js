@@ -10,6 +10,5 @@ const mapDispatchToProps = dispatch => ({
 
 });
 
-console.log(mapStateToProps)
 const BookListsContainer = connect(mapStateToProps, mapDispatchToProps)(BookList);
 export default BookListsContainer;

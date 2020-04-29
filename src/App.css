@@ -1,24 +1,228 @@
 .App {
-  text-align: center;
+
+  margin:1% 8%;
+}
+html {
+  box-sizing: border-box;
+  background-color: whitesmoke;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.booklist {
+  display:flex;
+  flex-direction:column;
+}
+.bookcontainer {
+
+  display:flex;
+  flex:3;
+  flex-direction:row;
+  margin-bottom:26px;
+  background-color:white;
+  
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.bookprogress {
+  flex:1;
+}
+.bookchapter {
+
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+
+  flex:1;
+}
+
+.bookchapter span:first-child {
+
+ text-transform: uppercase;
+    color: gray;
+    font-size: 14px;
+    padding: 3px;
+}
+.bookchapter span:nth-child(2) {
+
+  padding: 3px;
+    font-size: 14px;
+}
+
+.bookchapter p {
+
+  
+    background-color: dodgerblue;
+    text-transform: uppercase;
+    padding: 6px;
+    color: LIGHTBLUE;
+    text-align: center;
+    justify-content: center;
+    font-size:13px;
+}
+.bookchaptercircle {
+  font-size: 18px;
+   padding: 57px;
+  font-family: monospace;
+}
+.remove-container {
+
+  padding:10px;
+  color:lightsteelblue;
+}
+form {
+  display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+}
+form input:first-child {
+
+  flex:2;
+}
+form select {
+  flex: 1;
+  margin: 0 40px;
+}
+.bookitem {
+
+  
+    flex:2;
+    height: 150px;
+   display:flex;
+   flex-direction: column;
+    border-radius: 4px;
+    
+    background-color: #ffffff;
+  
+}
+
+.App {
+
+}
+.bookcategory {
+
+  width: 49px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  margin-left:16px;
+
+  
+}
+.bookid {
+  margin-top:10px;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 11px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  
+  color: #121212;
+  margin-left:16px;
+}
+.booktitle {
+
+  
+    width: 400px;
+    height: 29px;
+    padding:14px;
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    color: #121212;
+  
+}
+
+button {
+
+  border:none;
+  
+  background:white;
+  font-size:17px;
+  color:lightsteelblue;
+
+
+  
+}
+
+.navbar {
+  margin: 20px 0;
+  height: 95px;
+  background-color: #ffffff;
+  display:flex;
+  flex-wrap: nowrap;
+  flex:1;
+  
+}
+
+.categoryfilter {
+
+    display: flex;
+    flex: 3;
+    border: none;
+    height: 32px;
+    align-self: center;
+}
+
+.logo {
+
+  display:flex;
+  flex:3;
+  padding-left:20px;
+}
+.navbar h2 {
+
+  
+  height: 37px;
+  font-family: Arial;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.navbar p {
+
+  display:flex;
+  align-self:center;
+  height: 16px;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  margin-left:27px;
+}
+.bookform {
+
+  padding: 5px;
+
+}
+
+form input:last-child {
+  border: none;
+  background-color: dodgerblue;
+  font-size: 15px;
+  
   color: white;
+  padding: 10px 24px;
 }
+.bookform h1 {
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  font-size:18px;
 }

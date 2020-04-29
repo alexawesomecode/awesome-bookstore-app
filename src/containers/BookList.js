@@ -7,52 +7,43 @@ const BookList = props => {
   const {
     books, removeBook, addFilter, filter,
   } = props;
-console.log(books)
+
   const handleFilterChange = e => addFilter(e);
 
   return (
+    <div>
 
-    <div className="booklist">
       <CategoryFilter changeFilter={handleFilterChange} />
-      <table>
 
-        <tbody>
+      <div className="booklist">
 
-          <tr>
-            <th>Book Id</th>
-            <th>Category</th>
-            <th>Title</th>
-            <th>Remove Book</th>
+        { books.map(elem => {
+          if (filter === 'All') {
+            return (
+              <Book
+                key={elem.id}
+                title={elem.title}
+                category={elem.category}
+                id={elem.id}
+                handleRemoveBook={removeBook}
+              />
+            );
+          }
+          if (elem.category === filter) {
+            return (
+              <Book
+                key={elem.id}
+                title={elem.title}
+                category={elem.category}
+                id={elem.id}
+                handleRemoveBook={removeBook}
+              />
+            );
+          }
+          return undefined;
+        })}
+      </div>
 
-          </tr>
-          { books.map(elem => {
-            if (filter === 'All') {
-              return (
-                <Book
-                  key={elem.id}
-                  title={elem.title}
-                  category={elem.category}
-                  id={elem.id}
-                  handleRemoveBook={removeBook}
-                />
-              );
-            }
-            if (elem.category === filter) {
-              return (
-                <Book
-                  key={elem.id}
-                  title={elem.title}
-                  category={elem.category}
-                  id={elem.id}
-                  handleRemoveBook={removeBook}
-                />
-              );
-            }
-            return undefined;
-          })}
-        </tbody>
-
-      </table>
     </div>
 
   );
